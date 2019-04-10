@@ -50,11 +50,11 @@ function doPredict(predict) {
   const result = predict(textField.value);
   score_string = "Class scores: ";
   for (var x in result.score) {
-    score_string += x + " ->  " + result.score[x].toFixed(3) + ", "
+    score_string += x + " ->  " + result.score[x].toFixed(4) + ", "
   }
   //console.log(score_string);
   status(
-      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)');
+      score_string + ' elapsed: ' + result.elapsed.toFixed(4) + ' ms)');
 }
 
 function prepUI(predict) {
