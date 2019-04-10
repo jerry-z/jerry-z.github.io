@@ -8,9 +8,9 @@ const HOSTED_URLS = {
 
 const examples = {
   'example1':
-      'Alice was beginning to get very tired of sitting by her sister on the bank.',
+      'Right is right, and wrong is wrong, and a body ain’t got no business doing wrong when he ain’t ignorant and knows better.',
   'example2':
-      'Buda-Pesth seems a wonderful place.',
+      'The heaviest penalty for declining to rule is to be ruled by someone inferior to yourself.',
   'example3':
       'Scepticism was as much the result of knowledge, as knowledge is of scepticism.',  
   'example4':
