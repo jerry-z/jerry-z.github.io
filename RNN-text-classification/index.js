@@ -8,11 +8,11 @@ const HOSTED_URLS = {
 
 const examples = {
   'example1':
-      'Right is right, and wrong is wrong, and a body ain’t got no business doing wrong when he ain’t ignorant and knows better.',
+      'Everybody that wants to join has got to take an oath, and write his name in blood.',
   'example2':
-      'The heaviest penalty for declining to rule is to be ruled by someone inferior to yourself.',
+      'So that if there be a lover in the army, whether his love be youth or maiden, he may be more eager to win the prize of valour..',
   'example3':
-      'Scepticism was as much the result of knowledge, as knowledge is of scepticism.',  
+      'Swift at the mandate pleased Tritonia flies, And stoops impetuous from the cleaving skies.',  
   'example4':
       'Iago. It is meerly a Lust of the blood, and a permission of the will.'  
 };
