@@ -39,7 +39,7 @@ function setPredictFunction(predict) {
 }
 
 function disableLoadModelButtons() {
-  document.getElementById('load-model').style.display = 'none';
+  document.getElementById('load-model').style.display = 'inline-block';
 }
 
 function doPredict(predict) {
