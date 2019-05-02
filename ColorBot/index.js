@@ -1,9 +1,9 @@
 
 const HOSTED_URLS = {
   model:
-      'model_js/model.json',
+      'color_model_js/model.json',
   metadata:
-      'model_js/metadata.json'
+      'color_model_js/metadata.json'
 };
 
 const examples = {
