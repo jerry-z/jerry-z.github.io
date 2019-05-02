@@ -8,7 +8,7 @@ const HOSTED_URLS = {
 
 const examples = {
   'example1':
-      'dark green'  
+      'sky green'  
 };
 
 function status(statusText) {
