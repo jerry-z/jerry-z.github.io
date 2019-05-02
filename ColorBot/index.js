@@ -8,11 +8,7 @@ const HOSTED_URLS = {
 
 const examples = {
   'example1':
-      'light red',
-  'example2':
-      ' test',
-  'example3':
-      'test.'  
+      'red'  
 };
 
 function status(statusText) {
@@ -48,7 +44,7 @@ function doPredict(predict) {
   score_string = "RGB Values: ";
   var letters = ['R', 'G', 'B'];
   for (var x in result.score) {
-    score_string += letters[x] + " ->  " + 255*result.score[x].toFixed(3) + ", "
+    score_string += letters[x] + ":  " + 255*result.score[x].toFixed(3) + ", "
   }
   //console.log(score_string);
   status(
@@ -72,10 +68,10 @@ function doPredict(predict) {
 
 function prepUI(predict) {
   setPredictFunction(predict);
-  const testExampleSelect = document.getElementById('example-select');
-  testExampleSelect.addEventListener('change', () => {
-    settextField(examples[testExampleSelect.value], predict);
-  });
+  //const testExampleSelect = document.getElementById('example-select');
+  //testExampleSelect.addEventListener('change', () => {
+  //  settextField(examples[testExampleSelect.value], predict);
+  //});
   settextField(examples['example1'], predict);
 }
 
