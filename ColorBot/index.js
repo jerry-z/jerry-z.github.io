@@ -45,9 +45,10 @@ function disableLoadModelButtons() {
 function doPredict(predict) {
   const textField = document.getElementById('text-entry');
   const result = predict(textField.value);
-  score_string = "Class scores: ";
+  score_string = "RGB Values: ";
+  var letters = ['R', 'G', 'B'];
   for (var x in result.score) {
-    score_string += x + " ->  " + result.score[x].toFixed(3) + ", "
+    score_string += letters[x] + " ->  " + result.score[x].toFixed(3) + ", "
   }
   //console.log(score_string);
   status(
@@ -133,7 +134,7 @@ class Classifier {
 
     status('Running inference');
     const beginMs = performance.now();
-    const predictOut = this.model.predict(input);
+    const predictOut = this.model.predict(input)[0];
     //console.log(predictOut.dataSync());
     const score = predictOut.dataSync();//[0];
     predictOut.dispose();
