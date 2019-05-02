@@ -159,3 +159,15 @@ async function setup() {
 }
 
 setup();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var imgData = ctx.createImageData(100, 100);
+
+var n;
+for (n = 0; n < imgData.data.length; n += 4) {
+  imgData.data[n+0] = 255;
+  imgData.data[n+1] = 0;
+  imgData.data[n+2] = 0;
+  imgData.data[n+3] = 255;
+}
+ctx.putImageData(imgData, 10, 10);
