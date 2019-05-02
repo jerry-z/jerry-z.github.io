@@ -53,6 +53,21 @@ function doPredict(predict) {
   //console.log(score_string);
   status(
       score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)');
+      
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var imgData = ctx.createImageData(100, 100);
+  var n;
+  for (n = 0; n < imgData.data.length; n += 4) {
+    imgData.data[n+0] = result.score[0]*255;
+    imgData.data[n+1] = result.score[1]*255;
+    imgData.data[n+2] = result.score[2]*255;
+    imgData.data[n+3] = 255;
+  }
+  ctx.putImageData(imgData, 10, 10);
+          
+      
+      
 }
 
 function prepUI(predict) {
@@ -159,16 +174,4 @@ async function setup() {
 }
 
 setup();
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-var imgData = ctx.createImageData(100, 100);
-const textField1 = document.getElementById('text-entry');
-const result1 = predict(textField1.value)
-var n;
-for (n = 0; n < imgData.data.length; n += 4) {
-  imgData.data[n+0] = result1.score[0]*255;
-  imgData.data[n+1] = result1.score[1]*255;
-  imgData.data[n+2] = result1.score[2]*255;
-  imgData.data[n+3] = 255;
-}
-ctx.putImageData(imgData, 10, 10);
+
