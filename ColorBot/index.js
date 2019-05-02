@@ -8,7 +8,7 @@ const HOSTED_URLS = {
 
 const examples = {
   'example1':
-      'test',
+      'light blue',
   'example2':
       ' test',
   'example3':
@@ -39,7 +39,7 @@ function setPredictFunction(predict) {
 }
 
 function disableLoadModelButtons() {
-  document.getElementById('load-model').style.display = 'inline-block';
+  document.getElementById('load-model').style.display = 'none';
 }
 
 function doPredict(predict) {
@@ -56,10 +56,10 @@ function doPredict(predict) {
 
 function prepUI(predict) {
   setPredictFunction(predict);
-  const testExampleSelect = document.getElementById('example-select');
-  testExampleSelect.addEventListener('change', () => {
-    settextField(examples[testExampleSelect.value], predict);
-  });
+ // const testExampleSelect = document.getElementById('example-select');
+  //testExampleSelect.addEventListener('change', () => {
+  //  settextField(examples[testExampleSelect.value], predict);
+  //});
   settextField(examples['example1'], predict);
 }
 
