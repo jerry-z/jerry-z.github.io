@@ -48,7 +48,7 @@ function doPredict(predict) {
   score_string = "RGB Values: ";
   var letters = ['R', 'G', 'B'];
   for (var x in result.score) {
-    score_string += letters[x] + " ->  " + result.score[x].toFixed(3) + ", "
+    score_string += letters[x] + " ->  " + 255*result.score[x].toFixed(3) + ", "
   }
   //console.log(score_string);
   status(
