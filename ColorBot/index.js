@@ -162,12 +162,13 @@ setup();
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 var imgData = ctx.createImageData(100, 100);
-
+const textField1 = document.getElementById('text-entry');
+const result1 = predict(textField1.value)
 var n;
 for (n = 0; n < imgData.data.length; n += 4) {
-  imgData.data[n+0] = 255;
-  imgData.data[n+1] = 0;
-  imgData.data[n+2] = 0;
+  imgData.data[n+0] = result1.score[0]*255;
+  imgData.data[n+1] = result1.score[1]*255;
+  imgData.data[n+2] = result1.score[2]*255;
   imgData.data[n+3] = 255;
 }
 ctx.putImageData(imgData, 10, 10);
